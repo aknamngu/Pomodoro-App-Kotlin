@@ -1,6 +1,3 @@
-Dựa trên những phân tích chi tiết về dự án Aura Flow (POMODORO2), đây là nội dung file README.md được thiết kế chuyên nghiệp, làm nổi bật các công nghệ hiện đại mà bạn đang sử dụng để gây ấn tượng với nhà tuyển dụng.
-
-Bạn có thể nhấn vào nút Add a README trên GitHub và dán nội dung này vào:
 
 🌌 Aura Flow (POMODORO2) - Productivity & Garden System
 Aura Flow là một ứng dụng quản lý năng suất đột phá, kết hợp giữa phương pháp đếm giờ Pomodoro khoa học và cơ chế Gamification (trò chơi hóa). Ứng dụng mang phong cách thiết kế Cyberpunk hiện đại với tông màu tối và hiệu ứng Neon (Hồng Aura, Xanh Mint), giúp người dùng duy trì sự tập trung một cách thú vị và kỷ luật.
