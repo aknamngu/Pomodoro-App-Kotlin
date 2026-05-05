@@ -27,6 +27,8 @@ Cloud & Auth: Firebase SDK (Authentication & Google Sign-In).
 Networking: Retrofit + Gson để kết nối API châm ngôn và thời tiết.
 
 Architecture: MVVM kết hợp Kotlin Coroutines & Flow để xử lý dữ liệu thời gian thực.
+<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/1d55f9a9-2c99-453d-90fd-f9594bd0625a" />
+<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/72164bad-beba-4e99-8397-401beefdda66" />
 
 
 📋 Hướng dẫn cài đặt
