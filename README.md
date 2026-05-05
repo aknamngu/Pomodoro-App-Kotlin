@@ -1,0 +1,46 @@
+Dựa trên những phân tích chi tiết về dự án Aura Flow (POMODORO2), đây là nội dung file README.md được thiết kế chuyên nghiệp, làm nổi bật các công nghệ hiện đại mà bạn đang sử dụng để gây ấn tượng với nhà tuyển dụng.
+
+Bạn có thể nhấn vào nút Add a README trên GitHub và dán nội dung này vào:
+
+🌌 Aura Flow (POMODORO2) - Productivity & Garden System
+Aura Flow là một ứng dụng quản lý năng suất đột phá, kết hợp giữa phương pháp đếm giờ Pomodoro khoa học và cơ chế Gamification (trò chơi hóa). Ứng dụng mang phong cách thiết kế Cyberpunk hiện đại với tông màu tối và hiệu ứng Neon (Hồng Aura, Xanh Mint), giúp người dùng duy trì sự tập trung một cách thú vị và kỷ luật.
+
+🚀 Tính năng nổi bật
+⏱️ Timer Engine Đa năng: Hỗ trợ linh hoạt các chế độ Pomodoro (25/5), Countdown (đếm ngược) và Stopwatch (đếm tiến).
+
+🪴 Garden System (Gamification): Tập trung thành công để nhận Drops (giọt nước) giúp cây trong vườn phát triển. Dừng timer giữa chừng sẽ bị trừ tiền và làm cây chết, tạo động lực duy trì kỷ luật.
+
+📱 Whitelist (Chống xao nhãng): Cho phép chọn danh sách ứng dụng "được phép" mở khi đang đếm giờ, hạn chế các ứng dụng gây xao nhãng khác.
+
+🤖 Aura AI: Tích hợp trí tuệ nhân tạo để phân tích mục tiêu (Task) lớn thành các bước nhỏ và cung cấp châm ngôn động lực hàng ngày.
+
+📟 Home Screen Widget: Sử dụng Jetpack Glance để điều khiển trình đếm giờ trực tiếp ngay từ màn hình chính.
+
+🛠️ Bản đồ Công nghệ (Tech Stack)
+Dự án áp dụng bộ công nghệ Android hiện đại nhất (2024-2025):
+
+UI Framework: Jetpack Compose (Material 3) kết hợp Custom Canvas để vẽ hiệu ứng Cyberpunk.
+
+Data Persistence: Room Database (lưu Task/Lịch sử) và DataStore Preferences (lưu cài đặt/Drops).
+
+Background Processing: Foreground Service giúp đếm giờ chính xác ngay cả khi tắt ứng dụng.
+
+Cloud & Auth: Firebase SDK (Authentication & Google Sign-In).
+
+Networking: Retrofit + Gson để kết nối API châm ngôn và thời tiết.
+
+Architecture: MVVM kết hợp Kotlin Coroutines & Flow để xử lý dữ liệu thời gian thực.
+
+📸 Giao diện ứng dụng
+(Bạn có thể chèn các ảnh chụp màn hình điện thoại vào đây để Repo sinh động hơn)
+![Screenshot 1](link_anh_1)
+![Screenshot 2](link_anh_2)
+
+📋 Hướng dẫn cài đặt
+Clone dự án:
+
+Bash
+git clone https://github.com/aknamngu/Pomodoro-App-Kotlin.git
+Cấu hình Firebase: Đảm bảo bạn đã thêm file google-services.json vào thư mục /app của dự án.
+
+Build dự án: Sử dụng Android Studio (phiên bản mới nhất), đồng bộ Gradle và nhấn Run trên thiết bị Android (API 24+).
