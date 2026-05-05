@@ -30,10 +30,12 @@ Architecture: MVVM kết hợp Kotlin Coroutines & Flow để xử lý dữ li�
 
 📸 Giao diện ứng dụng:
 <div align="center">
-<img width="540" height="" alt="image" src="https://github.com/user-attachments/assets/1d55f9a9-2c99-453d-90fd-f9594bd0625a" />
+<img width="324" height="720" alt="image" src="https://github.com/user-attachments/assets/1d55f9a9-2c99-453d-90fd-f9594bd0625a" />
 </div>
 
+<div align="center">
 <img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/72164bad-beba-4e99-8397-401beefdda66" />
+</div>
 
 [![Aura Flow App Demo](https://img.youtube.com/vi/xzjwjEYehtY/0.jpg)](https://www.youtube.com/watch?v=xzjwjEYehtY)
 
