@@ -28,10 +28,6 @@ Networking: Retrofit + Gson để kết nối API châm ngôn và thời tiết.
 
 Architecture: MVVM kết hợp Kotlin Coroutines & Flow để xử lý dữ liệu thời gian thực.
 
-📸 Giao diện ứng dụng
-(Bạn có thể chèn các ảnh chụp màn hình điện thoại vào đây để Repo sinh động hơn)
-![Screenshot 1](link_anh_1)
-![Screenshot 2](link_anh_2)
 
 📋 Hướng dẫn cài đặt
 Clone dự án:
