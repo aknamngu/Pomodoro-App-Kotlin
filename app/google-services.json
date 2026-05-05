@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "142763604038",
+    "project_id": "aura-flow-fb563",
+    "storage_bucket": "aura-flow-fb563.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142763604038:android:1f6bdc8e6f34adc3197247",
+        "android_client_info": {
+          "package_name": "com.example.pomodoro2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142763604038-9dbs6lo72sc07q55sp8qjjlg4p78sdao.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pomodoro2",
+            "certificate_hash": "09246e53b2685d5b771f15407edfbd3bc0442db8"
+          }
+        },
+        {
+          "client_id": "142763604038-jna2bbphqakjcu9kb0g75utb6iqepoej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIlaA0CAVctyA9MvryzJXhYDvXNFpBFSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142763604038-jna2bbphqakjcu9kb0g75utb6iqepoej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
