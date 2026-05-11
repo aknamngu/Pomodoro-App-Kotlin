@@ -1,9 +1,21 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     id("com.google.gms.google-services")
     alias(libs.plugins.ksp)
 }
+
+// Đọc các API Key từ local.properties
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(localPropertiesFile.inputStream())
+}
+
+val geminiKey = localProperties.getProperty("GEMINI_API_KEY") ?: ""
+val weatherKey = localProperties.getProperty("WEATHER_API_KEY") ?: ""
 
 android {
     namespace = "com.example.pomodoro2"
@@ -17,6 +29,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Truyền API Keys vào code thông qua BuildConfig
+        buildConfigField("String", "GEMINI_API_KEY", "\"$geminiKey\"")
+        buildConfigField("String", "WEATHER_API_KEY", "\"$weatherKey\"")
     }
 
     buildTypes {
@@ -35,7 +51,9 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
+    
     sourceSets {
         getByName("debug") {
             java.srcDirs("build/generated/ksp/debug/kotlin")
@@ -44,11 +62,9 @@ android {
             java.srcDirs("build/generated/ksp/release/kotlin")
         }
     }
-
 }
 
 dependencies {
-    // Thư viện để Glance lưu trạng thái thời gian thực
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("androidx.glance:glance-appwidget:1.1.0")
     implementation(libs.androidx.core.ktx)
@@ -63,35 +79,27 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("androidx.navigation:navigation-compose:2.8.5")
 
-    // Coil for Image Loading
     implementation("io.coil-kt:coil-compose:2.6.0")
-
-    // Extended Icons
     implementation("androidx.compose.material:material-icons-extended")
 
-    // Firebase & Auth
     implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.android.gms:play-services-auth:21.3.0")
     implementation("com.google.accompanist:accompanist-drawablepainter:0.32.0")
 
-    // Room Database
     val roomVersion = "2.7.0-alpha11"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
 
-    // DataStore Preferences
     implementation("androidx.datastore:datastore-preferences:1.1.1")
-
-    // Lifecycle Service
     implementation("androidx.lifecycle:lifecycle-service:2.8.7")
 
-    // Networking - Retrofit & Gson
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
-    // Testing
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

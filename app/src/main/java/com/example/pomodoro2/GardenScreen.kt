@@ -21,6 +21,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -91,7 +92,14 @@ fun GardenScreen(
     // Fetch Weather
     LaunchedEffect(weatherCity) {
         try {
-            val response = WeatherApi.retrofitService.getWeather(weatherCity, "c4377fe40da5a5105f8d008afd798aaf")
+            // Sử dụng API Key từ BuildConfig thay vì hardcode
+            val apiKey = BuildConfig.WEATHER_API_KEY
+            if (apiKey.isBlank()) {
+                Log.w("WeatherGarden", "Weather API Key is missing in local.properties")
+                return@LaunchedEffect
+            }
+
+            val response = WeatherApi.retrofitService.getWeather(weatherCity, apiKey)
             var main = response.weather.firstOrNull()?.main ?: ""
             
             if (weatherCity == "Ho Chi Minh City") main = "Clear"
